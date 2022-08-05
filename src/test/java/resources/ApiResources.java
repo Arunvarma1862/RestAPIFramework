@@ -15,7 +15,8 @@ public enum ApiResources {
 		this.resource=resource;          // this keyword referees to current class variable 
 		
 	}
-	public String getResources() {
+	public String getResources()
+	{
 		return resource;
 	}
 }

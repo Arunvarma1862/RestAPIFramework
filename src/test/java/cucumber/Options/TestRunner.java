@@ -8,9 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src/test/java/Features"
-                 ,plugin="json:target/jsonReports/cucumber-report.json"
+                ,plugin="json:target/cucumberreports/jsonreport.json"
                  ,glue= "stepDefintions")
-                 //,tags= "@AddPlace"
-public class TestRun {
+             //    tags= "@AddPlace")
+public class TestRunner {
 
 }

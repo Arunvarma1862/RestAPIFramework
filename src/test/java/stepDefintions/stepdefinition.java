@@ -10,24 +10,27 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.junit.Cucumber;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import resources.ApiResources;
 import resources.TestData;
 import resources.utlis;
 
 @RunWith(Cucumber.class)
-public class stepdefini  extends utlis  {
+public class stepdefinition  extends utlis  {
 	
-	RequestSpecification res;
-	//Response	response;
-	static String placeID;
+	 RequestSpecification res;
+	static   String placeID;
+	 Response response;
+	
+	
+	
+	
 	TestData td= new TestData();
-	
-	
-
 
 	@Given("Add place Payload with {string} {string} {string}")
-	public void add_place_payload_with(String name, String language, String address) throws Exception {
+	public void add_place_payload_with(String name, String language, String address) throws Exception
+	{
 
 		res =  given().spec(SpecRequest())                      
 				.body(td.addPlacePayLoad(name,language,address));
@@ -37,7 +40,8 @@ public class stepdefini  extends utlis  {
 
 
 	@When("user calls {string} with {string} http request")
-	public void user_calls_with_http_request(String resource, String http) {
+	public void user_calls_with_http_request(String resource, String http)
+	{
 		
 	//Constructor will be called with value of resource which you pass	
 		
@@ -72,20 +76,29 @@ public class stepdefini  extends utlis  {
 	public void something_in_response_body_is_something(String keyvalue, String Expectedvalue) throws Throwable {
 	
 	 
-		 assertEquals(getJson(keyvalue),Expectedvalue);  
+		
+		assertEquals(getJson(response,keyvalue),Expectedvalue);
+		
+	/*String ab = (getJson(response,keyvalue));  
+	assertEquals(ab,Expectedvalue);
+	System.out.println(ab);*/
 		
 	}
 
-   @Then("verify place_id created maps to{string} using {string}")
+   @Then("verify place_id created maps to {string} using {string}")
    public void verify_place_id_created_maps_to_arya_using(String expectedName,String resource) throws Exception {
     
     // requestSpec
 	   
-	     placeID=  getJson(	"place_id");
+	     placeID = getJson(response,"place_id");
 	     res =  given().spec(SpecRequest()).queryParam("place_id", placeID) ;  
 	     user_calls_with_http_request( resource, "GET");
-	     String name=  getJson(	"name");
+	     String name=  getJson(response,"name");
 	     assertEquals(name,expectedName);
+	     
+	     
+	    /* System.out.println(placeID);
+	     System.out.println(name);*/
 }
    @Given("DeletePlace payLoad")
    public void delete_place_pay_load() throws Exception {

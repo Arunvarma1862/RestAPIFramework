@@ -3,6 +3,7 @@ package stepDefintions;
 import io.cucumber.java.Before;
 
 public class Hooks {
+	
 	@Before("@DeletePlace")
 	public void beforeScenario() throws Exception {
 		
@@ -10,8 +11,8 @@ public class Hooks {
 		// write a code that will give you place id
 		
 		
-		stepdefini  m= new stepdefini();
-		if(stepdefini.placeID==null)
+		stepdefinition  m= new stepdefinition();
+		if(stepdefinition.placeID==null)
 		{	
 		m.add_place_payload_with("shetty", "english", "delhi");
 		m.user_calls_with_http_request("AddplaceAPI", "POST");

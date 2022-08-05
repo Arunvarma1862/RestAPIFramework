@@ -31,11 +31,11 @@ public class AddPlace {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPhonenumber() {
+	public String getPhone_number() {
 		return phone_number;
 	}
-	public void setPhonenumber(String phonenumber) {
-		this.phone_number = phonenumber;
+	public void setPhone_number(String phone_number) {
+		this.phone_number = phone_number;
 	}
 	public String getAddress() {
 		return address;
@@ -61,6 +61,7 @@ public class AddPlace {
 	public void setLanguage(String language) {
 		this.language = language;
 	}
-
+	
+	
 	
 }

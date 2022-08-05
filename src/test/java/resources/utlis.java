@@ -23,7 +23,7 @@ public class utlis {
 
 	public static RequestSpecification  req;
 	public static ResponseSpecification resp;
-	public static Response	response ;
+
 	
 	 
 	 
@@ -65,7 +65,7 @@ public class utlis {
 		
 	
 	}
-	public String getJson(String key) {
+	public String getJson(Response	response ,String key) {
 		 
 		String status = response.asString();
 		JsonPath js= new JsonPath(status);

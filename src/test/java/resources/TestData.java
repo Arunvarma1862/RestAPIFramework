@@ -20,7 +20,7 @@ public class TestData {
 		ad.setWebsite("http://google.com");
 		ad.setLanguage(language);
 		ad.setName(name);
-		ad.setPhonenumber("(+91) 983 893 3937");
+		ad.setPhone_number("(+91) 983 893 3937");
 
 		List<String> myList = new ArrayList<String>();
 		myList.add("shoe park");

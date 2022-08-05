@@ -17,17 +17,17 @@ Body:
     },
     "accuracy": 50,
     "name": "Arya",
+    "phone_number": "(+91) 983 893 3937",
     "address": "world famous lover",
     "types": [
         "shoe park",
         "shop"
     ],
     "website": "http://google.com",
-    "language": "french lag",
-    "phonenumber": "(+91) 983 893 3937"
+    "language": "french lag"
 }
 HTTP/1.1 200 OK
-Date: Sun, 17 Jul 2022 09:48:43 GMT
+Date: Fri, 22 Jul 2022 11:51:35 GMT
 Server: Apache/2.4.41 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
@@ -40,17 +40,17 @@ Content-Type: application/json;charset=UTF-8
 
 {
     "status": "OK",
-    "place_id": "8a8120ec88baa392f8594ea62a99bf7b",
+    "place_id": "cc9994b6109361c1c7f7c754367a1caa",
     "scope": "APP",
-    "reference": "cee0781bd36534b18fb34683f2d5252ccee0781bd36534b18fb34683f2d5252c",
-    "id": "cee0781bd36534b18fb34683f2d5252c"
+    "reference": "83b1b0b3d44c39b3e2fbeb3c4ee668a183b1b0b3d44c39b3e2fbeb3c4ee668a1",
+    "id": "83b1b0b3d44c39b3e2fbeb3c4ee668a1"
 }
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=8a8120ec88baa392f8594ea62a99bf7b
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=cc9994b6109361c1c7f7c754367a1caa
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=8a8120ec88baa392f8594ea62a99bf7b
+				place_id=cc9994b6109361c1c7f7c754367a1caa
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -59,13 +59,13 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Sun, 17 Jul 2022 09:48:46 GMT
+Date: Fri, 22 Jul 2022 11:51:37 GMT
 Server: Apache/2.4.41 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 222
+Content-Length: 240
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
@@ -77,39 +77,9 @@ Content-Type: application/json;charset=UTF-8
     },
     "accuracy": "50",
     "name": "Arya",
-    "phone_number": "",
+    "phone_number": "(+91) 983 893 3937",
     "address": "world famous lover",
     "types": "shoe park,shop",
     "website": "http://google.com",
     "language": "french lag"
-}
-Request method:	DELETE
-Request URI:	https://rahulshettyacademy.com/maps/api/place/delete/json?key=qaclick123
-Proxy:			<none>
-Request params:	<none>
-Query params:	key=qaclick123
-Form params:	<none>
-Path params:	<none>
-Headers:		Accept=*/*
-				Content-Type=application/json
-Cookies:		<none>
-Multiparts:		<none>
-Body:
-{
-    "place_id": "8a8120ec88baa392f8594ea62a99bf7b"
-}
-HTTP/1.1 200 OK
-Date: Sun, 17 Jul 2022 09:48:46 GMT
-Server: Apache/2.4.41 (Ubuntu)
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: POST
-Access-Control-Max-Age: 3600
-Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 15
-Keep-Alive: timeout=5, max=100
-Connection: Keep-Alive
-Content-Type: application/json;charset=UTF-8
-
-{
-    "status": "OK"
 }
