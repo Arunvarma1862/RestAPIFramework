@@ -17,6 +17,7 @@ public class Hooks {
 		m.add_place_payload_with("shetty", "english", "delhi");
 		m.user_calls_with_http_request("AddplaceAPI", "POST");
 		m.verify_place_id_created_maps_to_arya_using("shetty", "GetplaceAPI");
+		
 		}
 	}
 }

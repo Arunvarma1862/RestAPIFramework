@@ -3,7 +3,7 @@ package resources;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.restassured.RestAssured;
+
 import pojo.AddPlace;
 import pojo.getLocation;
 

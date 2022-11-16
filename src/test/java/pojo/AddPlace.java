@@ -7,7 +7,7 @@ public class AddPlace {
 	private getLocation location;
 	private int accuracy;
 	private String name;
-	private String phone_number;
+	private String phone_number;                           // Alt+shift+s
 	private String address;
 	private List<String> types;	
 	private String website;

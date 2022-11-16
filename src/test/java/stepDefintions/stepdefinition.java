@@ -12,29 +12,28 @@ import io.cucumber.java.en.When;
 import io.cucumber.junit.Cucumber;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import resources.utlis;
 import resources.ApiResources;
 import resources.TestData;
-import resources.utlis;
+
 
 @RunWith(Cucumber.class)
 public class stepdefinition  extends utlis  {
 	
-	 RequestSpecification res;
-	static   String placeID;
-	 Response response;
+	  RequestSpecification res;
+	  static  String placeID;
+	  Response response;
+	
+	  TestData td= new TestData();
 	
 	
-	
-	
-	TestData td= new TestData();
-
 	@Given("Add place Payload with {string} {string} {string}")
 	public void add_place_payload_with(String name, String language, String address) throws Exception
 	{
-
-		res =  given().spec(SpecRequest())                      
+		res  =   given().spec(SpecRequest())                      
 				.body(td.addPlacePayLoad(name,language,address));
 
+	
 	
 	}
 
@@ -45,12 +44,12 @@ public class stepdefinition  extends utlis  {
 		
 	//Constructor will be called with value of resource which you pass	
 		
-		
 		ApiResources resAPI= ApiResources.valueOf(resource);
-	    System.out.println(resAPI.getResources());
+		System.out.println(resAPI.getResources());
 		
-	    
-	    if(http.equalsIgnoreCase("POST"))
+		
+		
+if(http.equalsIgnoreCase("POST"))
 		     response=	res.when().post(resAPI.getResources());
 		else if(http.equalsIgnoreCase("GET"))
 		    response=	res.when().get(resAPI.getResources());
@@ -102,7 +101,8 @@ public class stepdefinition  extends utlis  {
 }
    @Given("DeletePlace payLoad")
    public void delete_place_pay_load() throws Exception {
-      res =given().spec(SpecRequest()).body(td.deletePlace(placeID));
+	      res =given().spec(SpecRequest()).body(td.deletePlace(placeID));
+  
    }
 
 }
